@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u3z-eW-nBM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ACI-1T-DT1">
+            <objects>
+                <navigationController id="u3z-eW-nBM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L9Z-Rl-fcG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LuI-LH-VUV" kind="relationship" relationship="rootViewController" id="RDh-sc-DOy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGP-bT-JAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="260"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="hJs-gU-qcs">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" title="Loading View Controller" id="KUA-m3-hbY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FcL-NU-lil">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="D6c-eo-lIa">
+                                <rect key="frame" x="169" y="325.5" width="37" height="37"/>
+                                <color key="color" red="0.69052404170000004" green="0.86554676289999999" blue="0.9680323005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D6c-eo-lIa" firstAttribute="centerX" secondItem="eUs-19-rxO" secondAttribute="centerX" id="BHn-rz-h60"/>
+                            <constraint firstItem="D6c-eo-lIa" firstAttribute="centerY" secondItem="eUs-19-rxO" secondAttribute="centerY" id="WFq-sS-TXX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eUs-19-rxO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCk-7Q-ztt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2111" y="-104"/>
+        </scene>
+        <!--Coin List-->
+        <scene sceneID="EhJ-rp-6Nt">
+            <objects>
+                <tableViewController storyboardIdentifier="CoinListViewController" id="LuI-LH-VUV" customClass="CoinListViewController" customModule="CoinList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TDS-Hx-5Ae">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoinListCell" rowHeight="80" id="5py-rr-qdv" customClass="CoinListCell" customModule="CoinList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5py-rr-qdv" id="jq8-0g-PHa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a12-Xa-pNX">
+                                            <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="ZBu-GV-SfA"/>
+                                                <constraint firstAttribute="height" constant="40" id="tDC-yP-CYS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCo-wh-rDh">
+                                            <rect key="frame" x="64" y="20" width="38" height="24"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0p-Hc-ion">
+                                            <rect key="frame" x="64" y="47" width="53" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Y0p-Hc-ion" firstAttribute="firstBaseline" secondItem="YCo-wh-rDh" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="5Gw-jH-fR9"/>
+                                        <constraint firstItem="a12-Xa-pNX" firstAttribute="centerY" secondItem="jq8-0g-PHa" secondAttribute="centerY" id="67q-UH-QPJ"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YCo-wh-rDh" secondAttribute="trailing" constant="16" id="Upc-6H-XHi"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Y0p-Hc-ion" secondAttribute="trailing" constant="16" id="VD9-PM-E1O"/>
+                                        <constraint firstItem="YCo-wh-rDh" firstAttribute="top" secondItem="a12-Xa-pNX" secondAttribute="top" id="Vr7-LY-CAs"/>
+                                        <constraint firstItem="a12-Xa-pNX" firstAttribute="leading" secondItem="jq8-0g-PHa" secondAttribute="leading" constant="16" id="hPx-4U-PF4"/>
+                                        <constraint firstItem="YCo-wh-rDh" firstAttribute="leading" secondItem="a12-Xa-pNX" secondAttribute="trailing" constant="8" id="j3y-cX-rbY"/>
+                                        <constraint firstItem="Y0p-Hc-ion" firstAttribute="leading" secondItem="YCo-wh-rDh" secondAttribute="leading" id="opn-iu-E93"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coinListImage" destination="a12-Xa-pNX" id="ORn-ny-c71"/>
+                                    <outlet property="coinNameLabel" destination="Y0p-Hc-ion" id="zAy-bo-JFN"/>
+                                    <outlet property="coinSymbolLabel" destination="YCo-wh-rDh" id="i9S-kJ-BEB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LuI-LH-VUV" id="HF4-fM-BjV"/>
+                            <outlet property="delegate" destination="LuI-LH-VUV" id="JT7-Cz-yv8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Coin List" id="EaZ-rX-Bmd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3X-7I-2KP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229.5999999999999" y="259.52023988005999"/>
+        </scene>
+    </scenes>
+</document>
